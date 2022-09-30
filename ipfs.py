@@ -21,6 +21,7 @@ def pin_to_ipfs(data):
 	print(response.text)
 
 	cid = response.text.split(",")[1].split(":")[1].replace('"','')
+	print (cid)
 
 	return cid
 
