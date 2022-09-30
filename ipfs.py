@@ -17,7 +17,7 @@ def pin_to_ipfs(data):
 	files = {
 		'file': json.dumps(data)
 		}
-	response = requests.post('https://ipfs.infura.io:5001/api/v0/add', files=files, auth=(project_id, project_secret))
+	response = requests.post('https://ipfs.infura.io:5001/api/v0/add', files=files) #, auth=(project_id, project_secret))
 	# print(response.text)
 
 	cid = response.text.split(",")[1].split(":")[1].replace('"','')
