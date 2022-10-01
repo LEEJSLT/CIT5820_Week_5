@@ -6,13 +6,17 @@ import json
 # API Key Secret: 2066e379d1f4119e39665ceaadc0eabb
 # data: Python Dictionary: key:value
 
+project_id = '2FTtIoa5G1Q3oWsCYT0fmE8MHPq'
+IPFS_API_endpoint = 'https://ipfs.infura.io:5001'
+project_secret = '2066e379d1f4119e39665ceaadc0eabb'
+
 def pin_to_ipfs(data):
 	assert isinstance(data,dict), f"Error pin_to_ipfs expects a dictionary"
 	#YOUR CODE HERE
 
-	project_id = '2FTtIoa5G1Q3oWsCYT0fmE8MHPq'
-	IPFS_API_endpoint = 'https://ipfs.infura.io:5001'
-	project_secret = '2066e379d1f4119e39665ceaadc0eabb'
+	# project_id = '2FTtIoa5G1Q3oWsCYT0fmE8MHPq'
+	# IPFS_API_endpoint = 'https://ipfs.infura.io:5001'
+	# project_secret = '2066e379d1f4119e39665ceaadc0eabb'
 
 	files = {
 		'file': json.dumps(data)
@@ -28,9 +32,9 @@ def pin_to_ipfs(data):
 def get_from_ipfs(cid,content_type="json"):
 	assert isinstance(cid,str), f"get_from_ipfs accepts a cid in the form of a string"
 	#YOUR CODE HERE	
-	project_id = '2FTtIoa5G1Q3oWsCYT0fmE8MHPq'
-	IPFS_API_endpoint = 'https://ipfs.infura.io:5001'
-	project_secret = '2066e379d1f4119e39665ceaadc0eabb'
+	# project_id = '2FTtIoa5G1Q3oWsCYT0fmE8MHPq'
+	# IPFS_API_endpoint = 'https://ipfs.infura.io:5001'
+	# project_secret = '2066e379d1f4119e39665ceaadc0eabb'
 
 	params = (
 		('arg',cid)
