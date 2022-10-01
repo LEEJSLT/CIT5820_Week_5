@@ -36,9 +36,9 @@ def get_from_ipfs(cid,content_type="json"):
 	# IPFS_API_endpoint = 'https://ipfs.infura.io:5001'
 	# project_secret = '2066e379d1f4119e39665ceaadc0eabb'
 
-	params = (
-		('arg',cid)
-	)
+	params = {
+		'arg':cid
+	}
 	response = requests.post('https://ipfs.dev.infura.org:5001/api/v0/cat', params=params, auth=(project_id, project_secret))
 	data = response.json()
 	# data = response.text
